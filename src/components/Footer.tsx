@@ -1,4 +1,5 @@
 import React from "react";
+import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope, FaFacebook } from "react-icons/fa";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -10,10 +11,11 @@ const Footer: React.FC = () => {
       { name: 'Contact', href: '#contact' }
     ],
     social: [
-      { name: 'LinkedIn', href: '#', icon: '💼' },
-      { name: 'GitHub', href: '#', icon: '📚' },
-      { name: 'Twitter', href: '#', icon: '🐦' },
-      { name: 'Email', href: 'mailto:ramadhanwambia83@gmail.com', icon: '📧' }
+      { name: 'LinkedIn', href: '#', icon: <FaLinkedin /> },
+      { name: 'GitHub', href: '#', icon: <FaGithub /> },
+      { name: 'Twitter', href: '#', icon: <FaTwitter /> },
+      { name: 'Facebook', href: '#', icon: <FaFacebook /> },
+      { name: 'Email', href: 'mailto:ramadhanwambia83@gmail.com', icon: <FaEnvelope /> }
     ]
   };
 
@@ -60,7 +62,7 @@ const Footer: React.FC = () => {
                   rel={social.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                   className="text-gray-400 hover:text-blue-400 transition-colors duration-300 text-sm flex items-center gap-2"
                 >
-                  <span>{social.icon}</span>
+                  <span className="text-lg">{social.icon}</span>
                   {social.name}
                 </a>
               ))}

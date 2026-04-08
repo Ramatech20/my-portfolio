@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaEnvelope, FaPhone, FaWhatsapp, FaMapMarkerAlt, FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -37,27 +38,27 @@ const Contact: React.FC = () => {
 
   const contactInfo = [
     {
-      icon: '📧',
+      icon: <FaEnvelope />,
       label: 'Email',
       value: 'ramadhanwambia83@gmail.com',
       href: 'mailto:ramadhanwambia83@gmail.com'
     },
     {
-      icon: '📱',
+      icon: <FaPhone />,
       label: 'Phone',
       value: '+254 704 489 778',
       href: 'tel:+254704489778'
     },
     {
-      icon: '💬',
+      icon: <FaWhatsapp />,
       label: 'WhatsApp',
       value: 'Chat on WhatsApp',
       href: 'https://wa.me/254704489778'
     },
     {
-      icon: '📍',
+      icon: <FaMapMarkerAlt />,
       label: 'Location',
-      value: 'Nairobi, Kenya',
+      value: 'Eldoret, Kenya',
       href: '#'
     }
   ];
@@ -215,21 +216,21 @@ const Contact: React.FC = () => {
                 className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors duration-300"
                 aria-label="LinkedIn"
               >
-                💼
+                <FaLinkedin className="text-xl" />
               </a>
               <a
                 href="#"
                 className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-400 transition-colors duration-300"
                 aria-label="Twitter"
               >
-                🐦
+                <FaTwitter className="text-xl" />
               </a>
               <a
                 href="#"
                 className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-purple-600 transition-colors duration-300"
                 aria-label="GitHub"
               >
-                📚
+                <FaGithub className="text-xl" />
               </a>
             </div>
           </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { FaBullseye, FaRocket, FaHandshake, FaLightbulb } from "react-icons/fa";
 
 // Define skills with proficiency levels
 const skills = [
@@ -89,19 +90,19 @@ const About: React.FC = () => {
             <h4 className="text-lg font-semibold mb-4 text-center">Beyond Code</h4>
             <div className="grid grid-cols-2 gap-4 text-center">
               <div>
-                <div className="text-2xl mb-1">🎯</div>
+                <div className="text-2xl mb-1"><FaBullseye /></div>
                 <div className="text-sm text-gray-400">Problem Solver</div>
               </div>
               <div>
-                <div className="text-2xl mb-1">🚀</div>
+                <div className="text-2xl mb-1"><FaRocket /></div>
                 <div className="text-sm text-gray-400">Quick Learner</div>
               </div>
               <div>
-                <div className="text-2xl mb-1">🤝</div>
+                <div className="text-2xl mb-1"><FaHandshake /></div>
                 <div className="text-sm text-gray-400">Team Player</div>
               </div>
               <div>
-                <div className="text-2xl mb-1">💡</div>
+                <div className="text-2xl mb-1"><FaLightbulb /></div>
                 <div className="text-sm text-gray-400">Innovative</div>
               </div>
             </div>
