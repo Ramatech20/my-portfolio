@@ -52,7 +52,7 @@ const Navbar = () => {
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
+      transition={{ duration: 0.8, ease: "ease-out" }}
     >
       <div className="max-w-7xl mx-auto px-6 py-4">
         <motion.div

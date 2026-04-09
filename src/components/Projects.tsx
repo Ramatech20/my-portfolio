@@ -92,7 +92,7 @@ const Projects: React.FC = () => {
       scale: 1,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
+        ease: "ease-out"
       }
     }
   };

@@ -34,7 +34,7 @@ const About: React.FC = () => {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: "easeOut" as const
+        ease: "ease-out"
       }
     }
   };
@@ -56,7 +56,7 @@ const About: React.FC = () => {
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              transition={{ duration: 0.8, ease: "ease-out" }}
             >
               About Me
             </motion.h2>
@@ -145,7 +145,7 @@ const About: React.FC = () => {
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.8, ease: "ease-out" }}
         >
           <motion.h3
             className="text-2xl font-bold mb-8 text-center lg:text-left"
@@ -188,7 +188,7 @@ const About: React.FC = () => {
                     transition={{
                       delay: index * 0.1 + 0.5,
                       duration: 1.5,
-                      ease: "easeOut"
+                      ease: "ease-out"
                     }}
                     whileHover={{
                       boxShadow: "0 0 20px rgba(59, 130, 246, 0.5)",
