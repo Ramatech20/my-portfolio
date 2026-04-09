@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 // Define project type with more details
 type Project = {
@@ -72,105 +73,236 @@ const projects: Project[] = [
 ];
 
 const Projects: React.FC = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        staggerChildren: 0.15
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50, scale: 0.9 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
     <section id="projects" className="py-24 px-6 max-w-7xl mx-auto">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+      <motion.div
+        className="text-center mb-16"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
+        <motion.h2
+          className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent"
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
           Data Analytics Portfolio
-        </h2>
-        <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mb-8"></div>
-        <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+        </motion.h2>
+        <motion.div
+          className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mb-8"
+          initial={{ width: 0 }}
+          whileInView={{ width: 80 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.5 }}
+        ></motion.div>
+        <motion.p
+          className="text-gray-400 max-w-2xl mx-auto text-lg"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.7 }}
+        >
           A showcase of analytics and data-focused projects built around statistical reporting, visualization, and decision support.
           Each item highlights how I turn data into actionable insight.
-        </p>
-      </div>
+        </motion.p>
+      </motion.div>
 
       {/* Projects Grid */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <motion.div
+        className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+      >
         {projects.map((project, index) => (
-          <div
+          <motion.div
             key={index}
             className="group bg-gray-900/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-800/50 hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 hover:-translate-y-2"
+            variants={cardVariants}
+            whileHover={{
+              y: -8,
+              boxShadow: "0 25px 50px -12px rgba(59, 130, 246, 0.25)",
+              transition: { duration: 0.3 }
+            }}
+            whileTap={{ scale: 0.98 }}
           >
             {/* Category Badge */}
-            <div className="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">
+            <motion.div
+              className="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 + index * 0.1 }}
+            >
               {project.category}
-            </div>
+            </motion.div>
 
             {/* Title */}
-            <h3 className="text-xl font-bold mb-3 group-hover:text-blue-400 transition-colors">
+            <motion.h3
+              className="text-xl font-bold mb-3 group-hover:text-blue-400 transition-colors"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 + index * 0.1 }}
+            >
               {project.title}
-            </h3>
+            </motion.h3>
 
             {/* Description */}
-            <p className="text-gray-400 mb-4 leading-relaxed">
+            <motion.p
+              className="text-gray-400 mb-4 leading-relaxed"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 + index * 0.1 }}
+            >
               {project.description}
-            </p>
+            </motion.p>
 
             {/* Key Features */}
-            <div className="mb-4">
+            <motion.div
+              className="mb-4"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5 + index * 0.1 }}
+            >
               <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
               <ul className="text-xs text-gray-500 space-y-1">
                 {project.features.slice(0, 3).map((feature, i) => (
-                  <li key={i} className="flex items-center">
+                  <motion.li
+                    key={i}
+                    className="flex items-center"
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.6 + index * 0.1 + i * 0.1 }}
+                  >
                     <span className="w-1 h-1 bg-blue-400 rounded-full mr-2"></span>
                     {feature}
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
 
             {/* Tech Stack */}
-            <div className="flex flex-wrap gap-2 mb-6">
+            <motion.div
+              className="flex flex-wrap gap-2 mb-6"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.7 + index * 0.1 }}
+            >
               {project.tech.map((tech, i) => (
-                <span
+                <motion.span
                   key={i}
                   className="text-xs bg-gray-800/80 px-2 py-1 rounded-md text-gray-300 border border-gray-700/50"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.8 + index * 0.1 + i * 0.05 }}
+                  whileHover={{ scale: 1.1, backgroundColor: "rgba(59, 130, 246, 0.2)" }}
                 >
                   {tech}
-                </span>
+                </motion.span>
               ))}
-            </div>
+            </motion.div>
 
             {/* Action Buttons */}
-            <div className="flex gap-3">
+            <motion.div
+              className="flex gap-3"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.9 + index * 0.1 }}
+            >
               {project.liveUrl && (
-                <a
+                <motion.a
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 text-center px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-semibold rounded-lg hover:from-blue-500 hover:to-purple-500 transition-all duration-300 transform hover:scale-105"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
                   Live Demo
-                </a>
+                </motion.a>
               )}
               {project.githubUrl && (
-                <a
+                <motion.a
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 text-center px-4 py-2 border border-gray-600 text-gray-300 text-sm font-semibold rounded-lg hover:border-white hover:bg-white/10 transition-all duration-300"
+                  whileHover={{ scale: 1.05, backgroundColor: "rgba(255, 255, 255, 0.1)" }}
+                  whileTap={{ scale: 0.95 }}
                 >
                   Code
-                </a>
+                </motion.a>
               )}
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
 
       {/* Call to Action */}
-      <div className="text-center mt-16">
-        <p className="text-gray-400 mb-6">
+      <motion.div
+        className="text-center mt-16"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+      >
+        <motion.p
+          className="text-gray-400 mb-6"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5 }}
+        >
           Interested in working together? Let's discuss your next project.
-        </p>
-        <button
+        </motion.p>
+        <motion.button
           onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
           className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-2xl hover:from-blue-500 hover:to-purple-500 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.7 }}
         >
           Start a Conversation
-        </button>
-      </div>
+        </motion.button>
+      </motion.div>
     </section>
   );
 };
