@@ -16,57 +16,57 @@ type Project = {
 // Enhanced projects data
 const projects: Project[] = [
   {
-    title: "Hospital Management System",
-    description: "Comprehensive healthcare management platform for modern hospitals",
-    longDescription: "A full-stack application designed to streamline hospital operations, featuring patient management, appointment scheduling, medical records, and administrative dashboards.",
-    tech: ["React", "TypeScript", "Node.js", "PostgreSQL", "Express"],
-    features: ["Patient Registration", "Appointment Scheduling", "Medical Records", "Staff Management", "Reporting Dashboard"],
-    category: "Healthcare",
-    githubUrl: "#"
-  },
-  {
     title: "SACCO Vision Analytics",
-    description: "Advanced financial data visualization and analytics platform",
-    longDescription: "A powerful business intelligence tool for Savings and Credit Cooperative Organizations (SACCOs), providing real-time financial insights, member analytics, and performance dashboards.",
-    tech: ["React", "D3.js", "Python", "FastAPI", "Power BI"],
-    features: ["Real-time Dashboards", "Member Analytics", "Financial Reporting", "Risk Assessment", "Predictive Modeling"],
+    description: "Financial analytics dashboard for cooperative lending and member performance.",
+    longDescription: "A business intelligence solution for SACCOs that delivers key financial indicators, member analytics, and performance reports using Power BI and Python data processing.",
+    tech: ["Power BI", "Python", "Excel", "SQL"],
+    features: ["Member Trends", "Loan Portfolio Analysis", "Financial Reporting", "Performance Dashboards", "Data Cleaning"],
     category: "Finance",
     githubUrl: "#"
   },
   {
-    title: "E-Commerce Analytics Suite",
-    description: "Data-driven insights platform for online retail businesses",
-    longDescription: "A comprehensive analytics solution that helps e-commerce businesses understand customer behavior, optimize pricing strategies, and improve conversion rates through advanced data visualization.",
-    tech: ["React", "Python", "Pandas", "Plotly", "SQL"],
-    features: ["Customer Segmentation", "Sales Forecasting", "A/B Testing", "Conversion Optimization", "Revenue Analytics"],
-    category: "E-Commerce",
-    githubUrl: "#"
-  },
-  {
-    title: "Smart Inventory System",
-    description: "AI-powered inventory management with predictive analytics",
-    longDescription: "An intelligent inventory management system that uses machine learning to predict demand, optimize stock levels, and prevent stockouts through automated reordering.",
-    tech: ["React", "Python", "TensorFlow", "MongoDB", "Docker"],
-    features: ["Demand Forecasting", "Automated Reordering", "Stock Optimization", "Supplier Management", "Real-time Alerts"],
-    category: "Logistics",
-    githubUrl: "#"
-  },
-  {
-    title: "Educational Data Platform",
-    description: "Learning analytics and student performance tracking system",
-    longDescription: "A comprehensive platform for educational institutions to track student performance, identify learning patterns, and provide personalized learning recommendations.",
-    tech: ["React", "Python", "R", "PostgreSQL", "Tableau"],
-    features: ["Student Analytics", "Performance Tracking", "Learning Recommendations", "Progress Reports", "Institutional Insights"],
+    title: "Education Performance Dashboard",
+    description: "Student assessment analytics and progress reporting system.",
+    longDescription: "A data platform for academic institutions to analyze student scores, attendance trends, and learning outcomes with visual reports and recommendations.",
+    tech: ["R", "Excel", "Tableau", "Python"],
+    features: ["Score Analysis", "Progress Tracking", "Performance Summary", "Trend Visualization", "Recommendations"],
     category: "Education",
     githubUrl: "#"
   },
   {
-    title: "Real Estate Analytics Hub",
-    description: "Property market analysis and investment decision support",
-    longDescription: "A sophisticated platform that analyzes real estate market trends, property values, and investment opportunities using advanced statistical models and market data.",
-    tech: ["React", "Python", "scikit-learn", "PostgreSQL", "Mapbox"],
-    features: ["Market Analysis", "Property Valuation", "Investment ROI", "Location Intelligence", "Trend Forecasting"],
-    category: "Real Estate",
+    title: "Market Research Report",
+    description: "Survey analysis and statistical reporting for decision-making.",
+    longDescription: "A research-focused analytics project applying hypothesis testing, regression modeling, and visual summaries to draw insights from survey datasets.",
+    tech: ["R", "SPSS", "Excel", "Power BI"],
+    features: ["Hypothesis Testing", "Regression Analysis", "Data Cleaning", "Report Writing", "Visualization"],
+    category: "Research",
+    githubUrl: "#"
+  },
+  {
+    title: "Retail Sales Dashboard",
+    description: "Sales performance analytics and forecasting for retail operations.",
+    longDescription: "A data analytics suite built to measure sales trends, customer behavior, and inventory impact using Excel, Python, and dashboard visualization.",
+    tech: ["Excel", "Python", "Power BI", "SQL"],
+    features: ["Sales Forecasts", "Trend Analysis", "Customer Segmentation", "Inventory Insights", "Dashboard Reports"],
+    category: "Retail",
+    githubUrl: "#"
+  },
+  {
+    title: "Data Cleaning & Reporting Toolkit",
+    description: "Structured workflows for dataset preparation and analysis.",
+    longDescription: "A toolkit focused on dataset organization, annotation, and quality assurance to ensure accurate analysis and reporting across research projects.",
+    tech: ["R", "Python", "Excel", "SPSS"],
+    features: ["Data Preparation", "Quality Checks", "Annotation", "Summary Statistics", "Report Generation"],
+    category: "Data Management",
+    githubUrl: "#"
+  },
+  {
+    title: "Community Survey Insights",
+    description: "Demographic and policy analytics for community surveys.",
+    longDescription: "An analytics project that transforms community survey data into digestible insights for policy planning and institutional decision-making.",
+    tech: ["R", "Power BI", "Excel"],
+    features: ["Survey Analysis", "Demographic Trends", "Policy Reporting", "Visualization", "Insight Summaries"],
+    category: "Community",
     githubUrl: "#"
   }
 ];
@@ -76,12 +76,12 @@ const Projects: React.FC = () => {
     <section id="projects" className="py-24 px-6 max-w-7xl mx-auto">
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-          Featured Projects
+          Data Analytics Portfolio
         </h2>
         <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mb-8"></div>
         <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-          A showcase of my recent work in full-stack development, data analytics, and system design.
-          Each project represents a unique challenge and innovative solution.
+          A showcase of analytics and data-focused projects built around statistical reporting, visualization, and decision support.
+          Each item highlights how I turn data into actionable insight.
         </p>
       </div>
 

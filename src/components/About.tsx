@@ -3,15 +3,15 @@ import { FaBullseye, FaRocket, FaHandshake, FaLightbulb } from "react-icons/fa";
 
 // Define skills with proficiency levels
 const skills = [
-  { name: "React", level: 90, category: "Frontend" },
-  { name: "TypeScript", level: 85, category: "Frontend" },
-  { name: "Node.js", level: 80, category: "Backend" },
-  { name: "Python", level: 85, category: "Data Science" },
-  { name: "SQL", level: 88, category: "Database" },
-  { name: "Power BI", level: 85, category: "Analytics" },
-  { name: "R", level: 80, category: "Statistics" },
-  { name: "Tailwind CSS", level: 90, category: "Frontend" },
-  { name: "Git", level: 85, category: "Tools" },
+  { name: "R", level: 90, category: "Statistics" },
+  { name: "Power BI", level: 90, category: "Analytics" },
+  { name: "Microsoft Excel", level: 90, category: "Analytics" },
+  { name: "SPSS", level: 75, category: "Analytics" },
+  { name: "Python", level: 80, category: "Data Science" },
+  { name: "SQL", level: 82, category: "Database" },
+  { name: "React", level: 80, category: "Frontend" },
+  { name: "HTML & CSS", level: 80, category: "Frontend" },
+  { name: "Git", level: 80, category: "Tools" },
 ];
 
 const About: React.FC = () => {
@@ -29,22 +29,17 @@ const About: React.FC = () => {
 
           <div className="space-y-6 text-gray-300 leading-relaxed">
             <p className="text-lg">
-              I'm a passionate <span className="text-white font-semibold">Applied Statistics & Computing</span> student
-              with a proven track record in full-stack development and data analytics. My journey combines
-              rigorous statistical analysis with modern web technologies to create meaningful digital solutions.
+              I'm a passionate <span className="text-white font-semibold">Applied Statistics with Computing</span> student focused on data collection, manipulation, analysis, and visualization.
+              My main strength is turning raw datasets into useful insight with tools like R, Excel, Power BI, and SPSS.
             </p>
 
             <p>
-              With over 3 years of experience, I've successfully delivered projects ranging from
-              hospital management systems to financial data visualization platforms. I specialize in
-              transforming complex data into actionable insights and building scalable applications
-              that drive business value.
+              Development is a strong complement to my analytics work; I am most confident with frontend delivery while continuing to build backend experience.
+              I enjoy creating clean interfaces for data dashboards and translating analysis into actionable business reports.
             </p>
 
             <p>
-              When I'm not coding, you'll find me exploring new technologies, contributing to open-source
-              projects, or mentoring fellow developers. I believe in continuous learning and staying
-              at the forefront of technological innovation.
+              I am committed to continuous learning, ethical data handling, and practical impact through research-oriented and data-driven solutions.
             </p>
           </div>
 

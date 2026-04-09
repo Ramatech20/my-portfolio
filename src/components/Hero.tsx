@@ -25,35 +25,34 @@ const Hero = () => {
         {/* Main heading */}
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
           <span className="bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
-            Data scientist
+            Applied Statistics
           </span>
           <br />
           <span className="text-gray-400 text-4xl md:text-6xl lg:text-7xl">
-            & Data Analyst
+            & Data Analytics
           </span>
         </h1>
 
         {/* Description */}
         <p className="text-gray-400 max-w-2xl mx-auto mb-12 text-lg md:text-xl leading-relaxed">
-          I craft digital experiences that drive results. From scalable web applications to
-          insightful data visualizations, I transform ideas into impactful solutions.
+          I turn data into insight using R, Excel, SPSS, Power BI, and Python, while supporting digital delivery through polished frontend experiences.
         </p>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
           <button
-            onClick={() => scrollToSection('projects')}
+            onClick={() => scrollToSection('resume')}
             className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl font-semibold hover:from-blue-500 hover:to-purple-500 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25"
           >
-            View My Work
+            View My Resume
             <span className="inline-block ml-2 transform group-hover:translate-x-1 transition-transform">→</span>
           </button>
 
           <button
-            onClick={() => scrollToSection('contact')}
+            onClick={() => scrollToSection('projects')}
             className="px-8 py-4 border-2 border-gray-600 text-white rounded-2xl font-semibold hover:border-white hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
           >
-            Let's Connect
+            See Analytics Work
           </button>
         </div>
 
@@ -61,15 +60,15 @@ const Hero = () => {
         <div className="grid grid-cols-3 gap-8 max-w-md mx-auto">
           <div className="text-center">
             <div className="text-2xl md:text-3xl font-bold text-white mb-1">3+</div>
-            <div className="text-sm text-gray-400">Years Experience</div>
+            <div className="text-sm text-gray-400">Years in analytics & computing</div>
           </div>
           <div className="text-center">
             <div className="text-2xl md:text-3xl font-bold text-white mb-1">15+</div>
-            <div className="text-sm text-gray-400">Projects Completed</div>
+            <div className="text-sm text-gray-400">Data-focused projects</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl md:text-3xl font-bold text-white mb-1">100%</div>
-            <div className="text-sm text-gray-400">Client Satisfaction</div>
+            <div className="text-2xl md:text-3xl font-bold text-white mb-1">May 2026</div>
+            <div className="text-sm text-gray-400">Attachment availability</div>
           </div>
         </div>
       </div>

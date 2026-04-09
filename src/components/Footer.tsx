@@ -7,6 +7,7 @@ const Footer: React.FC = () => {
   const footerLinks = {
     navigation: [
       { name: 'About', href: '#about' },
+      { name: 'Resume', href: '#resume' },
       { name: 'Projects', href: '#projects' },
       { name: 'Contact', href: '#contact' }
     ],
@@ -29,8 +30,7 @@ const Footer: React.FC = () => {
               Ramadhan
             </h3>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Full-Stack Developer & Data Analyst passionate about creating
-              innovative solutions that drive business value and user satisfaction.
+              Applied Statistics & Data Analytics student with frontend development skills, focused on creating insight-driven solutions for research and business.
             </p>
           </div>
 

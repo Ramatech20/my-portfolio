@@ -20,6 +20,7 @@ const Navbar = () => {
 
   const navItems = [
     { name: 'About', id: 'about' },
+    { name: 'Resume', id: 'resume' },
     { name: 'Projects', id: 'projects' },
     { name: 'Contact', id: 'contact' }
   ];
@@ -54,6 +55,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
             className="md:hidden p-2 rounded-lg hover:bg-gray-800 transition-colors"
           >
             <div className="w-6 h-6 flex flex-col justify-center items-center">
